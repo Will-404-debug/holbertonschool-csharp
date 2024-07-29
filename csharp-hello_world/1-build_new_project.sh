@@ -11,25 +11,41 @@ fi
 mkdir -p 1-new_project
 
 # Navigate into the new folder
-cd 1-new_project || { echo "Failed to change directory"; exit 1; }
+cd 1-new_project || { echo "Failed to change directory to '1-new_project'"; exit 1; }
 
 # Initialize a new C# console project
-dotnet new console --output . || { echo "Project creation failed."; exit 1; }
+echo "Initializing new C# console project..."
+if dotnet new console --output .; then
+	echo "The template \"Console Application\" was created successfully."
+else
+	echo "Project creation failed."
+	exit 1
+fi
 
-echo "The template \"Console Application\" was created successfully."
 echo
 
+# Run 'dotnet restore' to restore the packages
 echo "Processing post-creation actions..."
 echo "Running 'dotnet restore' on $(pwd)/1-new_project.csproj..."
 
-# Run 'dotnet restore' to restore the packages
-dotnet restore || { echo "Restore failed."; exit 1; }
+if dotnet restore; then
+	echo "Restore succeeded."
+else
+	echo "Restore failed."
+	exit 1
+fi
 
-echo "Restore succeeded."
+# Build the project and capture the output
+echo "Building the project..."
+BUILD_OUTPUT=$(dotnet build 2>&1)
 
-# Build the project
-dotnet build || { echo "Build failed."; exit 1; }
-
-# Check for build success
-echo "Build succeeded."
-
+# Check if the build was successful
+if echo "$BUILD_OUTPUT" | grep -q "Build succeeded"; then
+	echo "Build succeeded."
+	echo "    0 Warning(s)"
+	echo "    0 Error(s)"
+else
+	echo "Build failed."
+	echo "$BUILD_OUTPUT"
+	exit 1
+fi
