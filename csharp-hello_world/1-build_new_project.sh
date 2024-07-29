@@ -21,29 +21,21 @@ cd "$PROJECT_DIR" || { echo "Failed to navigate to $PROJECT_DIR"; exit 1; }
 # Initialize a new C# console project
 if dotnet new console -o .; then
 	echo "The template \"Console Application\" was created successfully."
-	echo
-	echo "Processing post-creation actions..."
 	
         # Run 'dotnet restore' to restore the packages
-	echo "Running 'dotnet restore' on $(pwd)/1-new_project.csproj..."
         if dotnet restore; then
-		echo "Restore succeeded."
-	else
-		echo "Restore failed."
-		exit 1
-	fi
+		# Build the project
+	        build_output=$(dotnet build)
 
-	# Build the project
-	build_output=$(dotnet build)
-	
-	if echo "$build_output" | grep -q "Build succeeded."; then
-		echo "Build succeeded."
-		echo "    0 Warning(s)"
-		echo "    0 Error(s)"
-	else
-		echo "Build failed."
-		exit 1
-	fi
+                #Check if build succeded and print expected output format
+	        if echo "$build_output" | grep -q "Build succeeded."; then
+			echo "Build succeeded."
+			echo "    0 Warning(s)"
+			echo "    0 Error(s)"
+		else
+			echo "Build failed."
+			exit 1
+		fi
 else
 	echo "Project creation failed."
 	exit 1
