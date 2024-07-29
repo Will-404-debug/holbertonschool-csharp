@@ -12,7 +12,7 @@ fi
 mkdir -p 1-new_project
 
 # Navigate into the new folder
-cd 1-new_project
+cd 1-new_project || { echo "Failed to change directory"; exit 1; }
 
 # Initialize a new C# console project
 dotnet new console --output .
