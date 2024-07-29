@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Check if the 'dotnet' command is available
+if ! command -v dotnet &> /dev/null
+then
+	echo "dotnet command could not be found. Please install .NET SDK."
+	exit 1
+fi
+
+# Create a new folder titled '0-new_project'
+mkdir -p 0-new_project
+
+# Navigate into the new folder
+cd 0-new_project
+
+# Initialize a new C# console project
+dotnet new console --output .
+
+# Check if the project creation was successful
+if [ $? -eq 0 ]; then
+       	echo "The template \"Console Application\" was created successfully."
+	echo
+	echo "Processing post-creation actions..."
+	echo "Running 'dotnet restore' on $(pwd)/0-new_project.csproj..."
+
+        # Run 'dotnet restore' to restore the packages
+	dotnet restore
+
+	# Check if the restore was successful
+	if [ $? -eq 0 ]; then
+		echo "Restore succeeded."
+	else
+		echo "Restore failed."
+	        exit 1
+	fi
+else
+	echo "Project creation failed."
+	exit 1
+fi
