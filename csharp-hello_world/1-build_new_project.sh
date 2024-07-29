@@ -34,7 +34,6 @@ if dotnet new console -o .; then
 	fi
 
 	# Build the project
-	echo "Building the project..."
 	build_output=$(dotnet build)
 	
 	if echo "$build_output" | grep -q "Build succeeded."; then
