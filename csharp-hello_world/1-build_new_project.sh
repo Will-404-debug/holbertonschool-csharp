@@ -19,13 +19,11 @@ mkdir -p "$PROJECT_DIR"
 cd "$PROJECT_DIR" || { echo "Failed to navigate to $PROJECT_DIR"; exit 1; }
 
 # Initialize a new C# console project
-if dotnet new console -o .; then
-	echo "The template \"Console Application\" was created successfully."
-	
-        # Run 'dotnet restore' to restore the packages
-        if dotnet restore; then
+if dotnet new console -o . &> /dev/null; then
+	# Run 'dotnet restore' to restore the packages
+        if dotnet restore &> /dev/null; then
 		# Build the project
-	        build_output=$(dotnet build)
+	        build_output=$(dotnet build 2>&1)
 
                 #Check if build succeded and print expected output format
 	        if echo "$build_output" | grep -q "Build succeeded."; then
