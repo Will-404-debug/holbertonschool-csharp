@@ -36,6 +36,10 @@ if dotnet new console -o .; then
 			echo "Build failed."
 			exit 1
 		fi
+	else
+		echo "Restore failed."
+		exit 1
+	fi
 else
 	echo "Project creation failed."
 	exit 1
