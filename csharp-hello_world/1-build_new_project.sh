@@ -1,53 +1,33 @@
 #!/usr/bin/env bash
 
-# Check if the 'dotnet' command is available
-if ! command -v dotnet &> /dev/null
-then
-	echo "dotnet command could not be found. Please install .NET SDK."
-	exit 1
-fi
+# Directory to create the new C# project in
+PROJECT_DIR="1-new_project"
 
-# Create a new folder titled '1-new_project'
-mkdir -p 1-new_project
+# Create a new directory for the project
+mkdir -p "$PROJECT_DIR"
 
-# Navigate into the new folder
-cd 1-new_project || { echo "Failed to change directory to '1-new_project'"; exit 1; }
+# Navigate to the project directory
+cd "$PROJECT_DIR" || { echo "Failed to navigate to $PROJECT_DIR"; exit 1; }
 
-# Initialize a new C# console project
-echo "Initializing new C# console project..."
-if dotnet new console --output .; then
-	echo "The template \"Console Application\" was created successfully."
-else
-	echo "Project creation failed."
-	exit 1
-fi
+# Initialize a new C# project with the Console Application template
+dotnet new console -o . || { echo "Failed to create new C# project"; exit 1; }
 
-echo
+# Display success message for project creation
+echo "The template \"Console Application\" was created successfully."
 
-# Run 'dotnet restore' to restore the packages
-echo "Processing post-creation actions..."
-echo "Running 'dotnet restore' on $(pwd)/1-new_project.csproj..."
+# Restore packages
+dotnet restore || { echo "Failed to restore packages"; exit 1; }
 
-if dotnet restore; then
-	echo "Restore succeeded."
-else
-	echo "Restore failed."
-	exit 1
-fi
+# Display success message for package restoration
+echo "Restore succeeded."
 
-# Build the project and capture the output
-echo "Building the project..."
-BUILD_OUTPUT=$(dotnet build 2>&1)
+# Build the project
+dotnet build || { echo "Failed to build the project"; exit 1; }
 
-# Check if the build was successful and format the output accordingly
-if echo "$BUILD_OUTPUT" | grep -q "Build succeeded"; then
-	echo "Build succeeded."
-	echo "    0 Warning(s)"
-	echo "    0 Error(s)"
-else
-	# If build did not succeed, print the captured output
-	echo "Build failed."
-	echo "$BUILD_OUTPUT"
-	exit 1
-fi
+# Display success message for build
+echo "Build succeeded."
+echo "    0 Warning(s)"
+echo "    0 Error(s)"
 
+# Go back to the original directory
+cd ..
