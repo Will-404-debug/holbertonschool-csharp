@@ -39,13 +39,15 @@ fi
 echo "Building the project..."
 BUILD_OUTPUT=$(dotnet build 2>&1)
 
-# Check if the build was successful
+# Check if the build was successful and format the output accordingly
 if echo "$BUILD_OUTPUT" | grep -q "Build succeeded"; then
 	echo "Build succeeded."
 	echo "    0 Warning(s)"
 	echo "    0 Error(s)"
 else
+	# If build did not succeed, print the captured output
 	echo "Build failed."
 	echo "$BUILD_OUTPUT"
 	exit 1
 fi
+
