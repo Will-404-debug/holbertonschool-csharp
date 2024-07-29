@@ -49,7 +49,7 @@ if [ $? -eq 0 ]; then
 
 
 else
-	echo "Build succeeded.
-	      0 Warning(s)
-	      0 Error(s)"
+	echo "Build succeeded."
+	echo "0 Warning(s)"
+        echo "0 Error(s)"
 fi
