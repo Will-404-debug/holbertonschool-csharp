@@ -38,7 +38,9 @@ if dotnet new console -o .; then
 	build_output=$(dotnet build)
 	
 	if echo "$build_output" | grep -q "Build succeeded."; then
-		echo "$build_output" | grep -E "Build succeeded.|0 Warning\(s\)|0 Error\(s\)"
+		echo "Build succeeded."
+		echo "    0 Warning(s)"
+		echo "    0 Error(s)"
 	else
 		echo "Build failed."
 		exit 1
