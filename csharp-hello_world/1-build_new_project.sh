@@ -49,9 +49,3 @@ else
 	echo "Project creation failed."
 	exit 1
 fi
-
-# Go back to the original directory
-cd ..
-
-# Optional: List the contents of the project directory to verify creation
-ls "$PROJECT_DIR"
