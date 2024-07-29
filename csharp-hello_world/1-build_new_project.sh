@@ -4,8 +4,8 @@
 #Check if the 'dotnet' command is available
 if ! command -v dotnet &> /dev/null
 then
-	    echo "dotnet command could not be found. Please install .NET SDK."
-	        exit 1
+	echo "dotnet command could not be found. Please install .NET SDK."
+	exit 1
 fi
 
 # Create a new folder titled '1-new_project'
