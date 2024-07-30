@@ -26,8 +26,11 @@ echo "$BUILD_OUTPUT"
 # Ensure output matches expected format
 if echo "$BUILD_OUTPUT" | grep -q "Build succeeded."; then
 	echo "Build succeeded."
-	echo "    0 Warning(s)"
-	echo "    0 Error(s)"
+	# Check for warnings and errors in the output
+	WARNINGS=$(echo "$BUILD_OUTPUT" | grep -oP '\d+ Warning\(s\)')
+	ERRORS=$(echo "$BUILD_OUTPUT" | grep -oP '\d+ Error\(s\)')
+	echo "    ${WARNINGS:-0 Warning(s)}"
+	echo "    ${ERRORS:-0 Error(s)}"
 else
 	echo "Build failed or format mismatch."
 fi
