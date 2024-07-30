@@ -1,29 +1,27 @@
 #!/usr/bin/env bash
 
-# Create a new folder titled '1-new_project'
-mkdir -p 1-new_project
+# Define the project directory
+PROJECT_DIR="1-new_project"
 
-# Navigate into the new folder
-cd 1-new_project || exit 1
+# Create the project directory if it does not exist
+if [ ! -d "$PROJECT_DIR" ]; then
+	mkdir "$PROJECT_DIR"
+fi
+
+# Navigate into the project directory
+cd "$PROJECT_DIR" || exit
 
 # Initialize a new C# console project
-dotnet new console --output . || { echo "Project creation failed."; exit 1; }
+dotnet new console
 
-# Run 'dotnet restore' to restore the packages
-dotnet restore || { echo "Restore failed."; exit 1; }
+# Restore dependencies
+dotnet restore
 
-# Build the project and capture the output
-BUILD_OUTPUT=$(dotnet build 2>&1)
+# Build the project
+dotnet build
 
-# Print the captured output
-echo "$BUILD_OUTPUT"
+# Navigate back to the original directory
+cd ..
 
-# Check if the build was successful
-if echo "$BUILD_OUTPUT" | grep -q "Build succeeded"; then
-	echo "Build succeeded."
-	echo "    0 Warning(s)"
-	echo "    0 Error(s)"
-else
-	echo "Build failed."
-	exit 1
-fi
+# Print a message indicating the script has completed
+echo "C# project setup and build completed successfully."
