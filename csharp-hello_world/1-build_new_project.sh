@@ -20,9 +20,6 @@ dotnet restore
 # Build the project and capture the output
 BUILD_OUTPUT=$(dotnet build 2>&1)
 
-# Print the build output
-echo "$BUILD_OUTPUT"
-
 # Ensure output matches expected format
 if echo "$BUILD_OUTPUT" | grep -q "Build succeeded."; then
 	echo "Build succeeded."
