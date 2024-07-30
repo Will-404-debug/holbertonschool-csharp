@@ -16,5 +16,5 @@ dotnet new console -o . || exit 1
 # Restore the project dependencies
 dotnet restore || exit 1
 
-# Build the project
-dotnet build
+# Build the project and only output the build result
+dotnet build | tee /dev/stderr | grep -E 'Build succeeded.|Error|Warning'
