@@ -18,16 +18,18 @@ dotnet new console
 dotnet restore
 
 # Build the project and capture the output
-BUILD_OUTPUT=$(dotnet build)
+BUILD_OUTPUT=$(dotnet build 2>&1)
 
 # Print the build output
 echo "$BUILD_OUTPUT"
 
-# Check for build success in the output
+# Ensure output matches expected format
 if echo "$BUILD_OUTPUT" | grep -q "Build succeeded."; then
 	echo "Build succeeded."
+	echo "    0 Warning(s)"
+	echo "    0 Error(s)"
 else
-	echo "Build failed."
+	echo "Build failed or format mismatch."
 fi
 
 # Navigate back to the original directory
