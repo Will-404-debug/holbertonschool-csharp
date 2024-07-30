@@ -17,11 +17,18 @@ dotnet new console
 # Restore dependencies
 dotnet restore
 
-# Build the project
-dotnet build
+# Build the project and capture the output
+BUILD_OUTPUT=$(dotnet build)
+
+# Print the build output
+echo "$BUILD_OUTPUT"
+
+# Check for build success in the output
+if echo "$BUILD_OUTPUT" | grep -q "Build succeeded."; then
+	echo "Build succeeded."
+else
+	echo "Build failed."
+fi
 
 # Navigate back to the original directory
 cd ..
-
-# Print a message indicating the script has completed
-echo "C# project setup and build completed successfully."
