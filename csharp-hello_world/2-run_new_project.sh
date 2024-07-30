@@ -30,6 +30,12 @@ if dotnet new console -o . &> /dev/null; then
 			echo "Build succeeded."
 			echo "    0 Warning(s)"
 			echo "    0 Error(s)"
+
+			# Run the project and capture output
+			run_output=$(dotnet run 2>&1)
+
+			# Output the result of running the project
+			echo "$run_output"
 		else
 			echo "Build failed."
 			exit 1
