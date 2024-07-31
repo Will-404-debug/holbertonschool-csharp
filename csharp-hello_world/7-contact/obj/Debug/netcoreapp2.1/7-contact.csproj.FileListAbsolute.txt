@@ -1,0 +1,11 @@
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/bin/Debug/netcoreapp2.1/7-contact.deps.json
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/bin/Debug/netcoreapp2.1/7-contact.runtimeconfig.json
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/bin/Debug/netcoreapp2.1/7-contact.runtimeconfig.dev.json
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/bin/Debug/netcoreapp2.1/7-contact.dll
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/bin/Debug/netcoreapp2.1/7-contact.pdb
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/obj/Debug/netcoreapp2.1/7-contact.csprojAssemblyReference.cache
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/obj/Debug/netcoreapp2.1/7-contact.csproj.CoreCompileInputs.cache
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/obj/Debug/netcoreapp2.1/7-contact.AssemblyInfoInputs.cache
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/obj/Debug/netcoreapp2.1/7-contact.AssemblyInfo.cs
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/obj/Debug/netcoreapp2.1/7-contact.dll
+/home/will404/holbertonschool-csharp/csharp-hello_world/7-contact/obj/Debug/netcoreapp2.1/7-contact.pdb
