@@ -1,0 +1,11 @@
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/netcoreapp2.1/0-positive_or_negative.deps.json
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/netcoreapp2.1/0-positive_or_negative.runtimeconfig.json
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/netcoreapp2.1/0-positive_or_negative.runtimeconfig.dev.json
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/netcoreapp2.1/0-positive_or_negative.dll
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/netcoreapp2.1/0-positive_or_negative.pdb
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/netcoreapp2.1/0-positive_or_negative.csprojAssemblyReference.cache
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/netcoreapp2.1/0-positive_or_negative.csproj.CoreCompileInputs.cache
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/netcoreapp2.1/0-positive_or_negative.AssemblyInfoInputs.cache
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/netcoreapp2.1/0-positive_or_negative.AssemblyInfo.cs
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/netcoreapp2.1/0-positive_or_negative.dll
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/netcoreapp2.1/0-positive_or_negative.pdb

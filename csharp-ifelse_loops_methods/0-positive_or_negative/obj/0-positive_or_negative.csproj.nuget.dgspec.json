@@ -1,33 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\root\\holbertonschool-csharp\\csharp-ifelse_loops_methods\\0-positive_or_negative\\0-positive_or_negative.csproj": {}
+    "/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/0-positive_or_negative.csproj": {}
   },
   "projects": {
-    "C:\\root\\holbertonschool-csharp\\csharp-ifelse_loops_methods\\0-positive_or_negative\\0-positive_or_negative.csproj": {
+    "/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/0-positive_or_negative.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\root\\holbertonschool-csharp\\csharp-ifelse_loops_methods\\0-positive_or_negative\\0-positive_or_negative.csproj",
+        "projectUniqueName": "/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/0-positive_or_negative.csproj",
         "projectName": "0-positive_or_negative",
-        "projectPath": "C:\\root\\holbertonschool-csharp\\csharp-ifelse_loops_methods\\0-positive_or_negative\\0-positive_or_negative.csproj",
-        "packagesPath": "C:\\Users\\moi\\.nuget\\packages\\",
-        "outputPath": "C:\\root\\holbertonschool-csharp\\csharp-ifelse_loops_methods\\0-positive_or_negative\\obj\\",
+        "projectPath": "/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/0-positive_or_negative.csproj",
+        "packagesPath": "/home/will404/.nuget/packages/",
+        "outputPath": "/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\moi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/will404/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "netcoreapp2.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
@@ -35,33 +34,22 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
+        "netcoreapp2.1": {
+          "dependencies": {
             "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
         }
       }
     }
