@@ -1,0 +1,11 @@
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/bin/Debug/netcoreapp2.1/0-print_array.deps.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/bin/Debug/netcoreapp2.1/0-print_array.runtimeconfig.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/bin/Debug/netcoreapp2.1/0-print_array.runtimeconfig.dev.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/bin/Debug/netcoreapp2.1/0-print_array.dll
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/bin/Debug/netcoreapp2.1/0-print_array.pdb
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/obj/Debug/netcoreapp2.1/0-print_array.csprojAssemblyReference.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/obj/Debug/netcoreapp2.1/0-print_array.csproj.CoreCompileInputs.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/obj/Debug/netcoreapp2.1/0-print_array.AssemblyInfoInputs.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/obj/Debug/netcoreapp2.1/0-print_array.AssemblyInfo.cs
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/obj/Debug/netcoreapp2.1/0-print_array.dll
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/0-print_array/obj/Debug/netcoreapp2.1/0-print_array.pdb
