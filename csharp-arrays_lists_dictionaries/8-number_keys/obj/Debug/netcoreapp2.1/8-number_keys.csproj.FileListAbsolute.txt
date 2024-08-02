@@ -1,0 +1,11 @@
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/bin/Debug/netcoreapp2.1/8-number_keys.deps.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/bin/Debug/netcoreapp2.1/8-number_keys.runtimeconfig.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/bin/Debug/netcoreapp2.1/8-number_keys.runtimeconfig.dev.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/bin/Debug/netcoreapp2.1/8-number_keys.dll
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/bin/Debug/netcoreapp2.1/8-number_keys.pdb
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.csprojAssemblyReference.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.csproj.CoreCompileInputs.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.AssemblyInfoInputs.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.AssemblyInfo.cs
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.dll
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.pdb
