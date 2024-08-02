@@ -17,11 +17,15 @@ class List
 		{
 			newList.Add(i);
 		}
-
-		// Print the list
-		foreach (var item in newList)
+		
+		// Print the list without trailing space
+		for (int i = 0; i < newList.Count; i++)
 		{
-			Console.Write(item + " ");
+			Console.Write(newList[i]);
+			if (i < newList.Count - 1)
+			{
+				Console.Write(" ");
+			}
 		}
 		Console.WriteLine();
 
