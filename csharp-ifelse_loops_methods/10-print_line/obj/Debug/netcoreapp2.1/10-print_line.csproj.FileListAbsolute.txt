@@ -1,0 +1,11 @@
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/bin/Debug/netcoreapp2.1/10-print_line.deps.json
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/bin/Debug/netcoreapp2.1/10-print_line.runtimeconfig.json
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/bin/Debug/netcoreapp2.1/10-print_line.runtimeconfig.dev.json
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/bin/Debug/netcoreapp2.1/10-print_line.dll
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/bin/Debug/netcoreapp2.1/10-print_line.pdb
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/netcoreapp2.1/10-print_line.csprojAssemblyReference.cache
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/netcoreapp2.1/10-print_line.csproj.CoreCompileInputs.cache
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/netcoreapp2.1/10-print_line.AssemblyInfoInputs.cache
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/netcoreapp2.1/10-print_line.AssemblyInfo.cs
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/netcoreapp2.1/10-print_line.dll
+/home/will404/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/netcoreapp2.1/10-print_line.pdb
