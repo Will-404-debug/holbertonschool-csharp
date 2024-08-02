@@ -22,6 +22,10 @@ class List
 				newList.Add(myList[i]);
 			}
 		}
+
+		// Replace the contents of myList with the new list
+		myList.Clear();
+		myList.AddRange(newList);
 		
 		return newList;
 	}
