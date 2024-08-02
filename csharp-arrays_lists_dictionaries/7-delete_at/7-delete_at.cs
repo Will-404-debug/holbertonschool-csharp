@@ -13,7 +13,7 @@ class List
 		}
 
 		// Create a new list excluding the element at the given index
-		List<int> newList = new List<int>(myList.Count - 1);
+		List<int> newList = new List<int>();
 
 		for (int i = 0; i < myList.Count; i++)
 		{
