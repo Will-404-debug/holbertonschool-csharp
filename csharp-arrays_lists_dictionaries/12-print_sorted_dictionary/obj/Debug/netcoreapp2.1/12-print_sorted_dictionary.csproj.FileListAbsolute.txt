@@ -1,0 +1,11 @@
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/bin/Debug/netcoreapp2.1/12-print_sorted_dictionary.deps.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/bin/Debug/netcoreapp2.1/12-print_sorted_dictionary.runtimeconfig.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/bin/Debug/netcoreapp2.1/12-print_sorted_dictionary.runtimeconfig.dev.json
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/bin/Debug/netcoreapp2.1/12-print_sorted_dictionary.dll
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/bin/Debug/netcoreapp2.1/12-print_sorted_dictionary.pdb
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.csprojAssemblyReference.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.csproj.CoreCompileInputs.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.AssemblyInfoInputs.cache
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.AssemblyInfo.cs
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.dll
+/home/will404/holbertonschool-csharp/csharp-arrays_lists_dictionaries/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.pdb
