@@ -1,0 +1,11 @@
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/obj/Debug/netcoreapp2.1/1-common_elements.csprojAssemblyReference.cache
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/obj/Debug/netcoreapp2.1/1-common_elements.csproj.CoreCompileInputs.cache
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/obj/Debug/netcoreapp2.1/1-common_elements.AssemblyInfoInputs.cache
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/obj/Debug/netcoreapp2.1/1-common_elements.AssemblyInfo.cs
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/bin/Debug/netcoreapp2.1/1-common_elements.deps.json
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/bin/Debug/netcoreapp2.1/1-common_elements.runtimeconfig.json
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/bin/Debug/netcoreapp2.1/1-common_elements.runtimeconfig.dev.json
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/bin/Debug/netcoreapp2.1/1-common_elements.dll
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/bin/Debug/netcoreapp2.1/1-common_elements.pdb
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/obj/Debug/netcoreapp2.1/1-common_elements.dll
+/home/will404/holbertonschool-csharp/csharp-hashset_stack_queue_linkedlist/1-common_elements/obj/Debug/netcoreapp2.1/1-common_elements.pdb
