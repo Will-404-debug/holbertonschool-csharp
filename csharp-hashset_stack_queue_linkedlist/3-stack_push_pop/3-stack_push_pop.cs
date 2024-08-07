@@ -32,26 +32,21 @@ class MyStack
 		// If aStack contains the given item search, remove all items up to and including search
 	        if (containsSearch)
                 {
-			// Pop all elements into tempLis once
-			string poppedItem = aStack.Pop();
-			tempList.Add(poppedItem);
-			while (poppedItem != search)
+			// Pop all elements at once
+			while (aStack.Count > 0)
 			{
-				if (aStack.Count > 0)
-				{
-					poppedItem = aStack.Peek();
-					tempList.Add(aStack.Pop());
-				}
-				else
-				{
-					break;
-				}
+				string item = aStack.Pop();
+				tempList.Add(item);
+				if (item == search)
+				break;
 			}
 		}
 		
 		// Push back the remaining items (if any) from tempList to aStack
-		for (int i = tempList.Count - 2; i >= 0; i--)
+		for (int i = tempList.Count - 1; i >= 0; i--)
 		{
+			if (tempList[i] == search)
+				break;
 			aStack.Push(tempList[i]);
 		}
 
