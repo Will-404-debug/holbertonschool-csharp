@@ -26,26 +26,34 @@ class MyStack
 		// If aStack contains the given item search, remove all items up to and including search
 		if (containsSearch)
 		{
-			Stack<string> tempStack = new Stack<string>();
+			// Use Pop once to get all elements
+			List<string> tempList = new List<string>();
+			tempList.Add(aStack.Pop());
+			
 			while (aStack.Count > 0)
 			{
-				string item = aStack.Pop();
-				if (item == search)
+				tempList.Add(aStack.Peek());
+				aStack.Pop();
+				if (tempList[tempList.Count - 1] == search)
 				{
 					break;
 				}
-				tempStack.Push(item);
 			}
-			// Restore the items back to the original stack except the removed ones
-			while (tempStack.Count > 0)
-			{
-				aStack.Push(tempStack.Pop());
+			
+			// Push remaining items back to aStack
+			for (int i = tempList.Count - 1; i >= 0; i--)
+		        {
+				if (tempList[i] == search)
+				{
+					break;
+				}
+				aStack.Push(tempList[i]);
 			}
 		}
 		
 		// Add a new given item newItem to aStack
 		aStack.Push(newItem);
-
+		
 		// Return the modified stack
 		return aStack;
 	}
