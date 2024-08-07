@@ -11,46 +11,39 @@ class MyStack
 		// Print the item at the top of aStack without removing it
 		if (aStack.Count > 0)
 		{
-			string topItem = aStack.Peek();
-			Console.WriteLine($"Top item: {topItem}");
+			Console.WriteLine($"Top item: {aStack.Peek()}");
 		}
 		else
 		{
 			Console.WriteLine("Stack is empty");
-			// Since the stack is empty, add newItem and return
-			aStack.Push(newItem);
-			return aStack;
 		}
 		
 		// Print if aStack contains a given item search
 		bool containsSearch = aStack.Contains(search);
 		Console.WriteLine($"Stack contains \"{search}\": {containsSearch}");
 
-		// Temporary list to hold the stack elements
-		List<string> tempList = new List<string>();
-
-		// If aStack contains the given item search, remove all items up to and including search
-	        if (containsSearch)
+		// Remove items up to and including the search item if it exists
+		if (containsSearch)
                 {
-			// Pop all elements at once
+			Stack<string> tempStack = new Stack<string>();
 			while (aStack.Count > 0)
 			{
-				string item = aStack.Pop();
-				tempList.Add(item);
-				if (item == search)
-				break;
+				string topItem = aStack.Pop();
+				if (topItem == search)
+				{
+					break;
+				}
+				tempStack.Push(topItem);
+			}
+			
+			// Put the remaining items back in the original stack
+			while (tempStack.Count > 0)
+			{
+				aStack.Push(tempStack.Pop());
 			}
 		}
-		
-		// Push back the remaining items (if any) from tempList to aStack
-		for (int i = tempList.Count - 1; i >= 0; i--)
-		{
-			if (tempList[i] == search)
-				break;
-			aStack.Push(tempList[i]);
-		}
 
-		// Add a new given item newItem to aStack
+		// Add a new item to the stack
 		aStack.Push(newItem);
 
 		// Return the modified stack
