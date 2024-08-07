@@ -17,37 +17,37 @@ class MyStack
 		else
 		{
 			Console.WriteLine("Stack is empty");
+			// Since the stack is empty, add newItem and return
+			aStack.Push(newItem);
+			return aStack;
 		}
-
+		
 		// Print if aStack contains a given item search
 		bool containsSearch = aStack.Contains(search);
 		Console.WriteLine($"Stack contains \"{search}\": {containsSearch}");
 
 		// If aStack contains the given item search, remove all items up to and including search
-		if (containsSearch)
-		{
+	        if (containsSearch)
+                {
 			// Use Pop once to get all elements
-			List<string> tempList = new List<string>();
-			tempList.Add(aStack.Pop());
-			
+			Stack<string> tempStack = new Stack<string>();
+			bool found = false;
+
 			while (aStack.Count > 0)
-			{
-				tempList.Add(aStack.Peek());
-				aStack.Pop();
-				if (tempList[tempList.Count - 1] == search)
-				{
-					break;
+                        {
+				string item = aStack.Pop();
+                                if (item == search)
+                                {
+					found = true;
+				        break;
 				}
+				tempStack.Push(item);
 			}
 			
 			// Push remaining items back to aStack
-			for (int i = tempList.Count - 1; i >= 0; i--)
-		        {
-				if (tempList[i] == search)
-				{
-					break;
-				}
-				aStack.Push(tempList[i]);
+			while (tempStack.Count > 0)
+			{
+				aStack.Push(tempStack.Pop());
 			}
 		}
 		
@@ -55,6 +55,6 @@ class MyStack
 		aStack.Push(newItem);
 		
 		// Return the modified stack
-		return aStack;
+	        return aStack;
 	}
 }
