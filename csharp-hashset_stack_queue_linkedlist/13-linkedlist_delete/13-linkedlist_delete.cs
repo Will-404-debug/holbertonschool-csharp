@@ -9,6 +9,10 @@ class LList
 		if (myLList.First == null)
 			return;
 
+		// If the index is negative, return
+		if (index < 0)
+			return;
+
 		// Traverse the list to find the node at the specified index
 		LinkedListNode<int> current = myLList.First;
 		int currentIndex = 0;
