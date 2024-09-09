@@ -7,39 +7,40 @@ class List
 	{
 		List<int> result = new List<int>();
 
-		for (int i = 0; i < listLength; i++)
+		try
 		{
-			try
+			// Check if either list is too short
+			if (list1.Count < listLength || list2.Count < listLength)
 			{
-				if (i >= list1.Count)
+				Console.WriteLine("Out of range");
+				return result;
+			}
+
+			for (int i = 0; i < listLength; i++)
+			{
+				try
 				{
-					Console.WriteLine("Out of range");
+					// Perform division and handle division by zero
+					int divisionResult = list1[i] / list2[i];
+					result.Add(divisionResult);
+				}
+				catch (DivideByZeroException)
+				{
+					Console.WriteLine("Cannot divide by zero");
 					result.Add(0);
 				}
-				else if (i >= list2.Count)
+				catch (Exception)
 				{
-					Console.WriteLine("Out of range");
+					// Handle any unexpected exceptions
 					result.Add(0);
 				}
-				else
-				{
-					try
-					{
-						int divisionResult = list1[i] / list2[i];
-						result.Add(divisionResult);
-					}
-					catch (DivideByZeroException)
-					{
-						Console.WriteLine("Cannot divide by zero");
-						result.Add(0);
-					}
-				}
+
 			}
-			catch (Exception ex)
-			{
-				Console.WriteLine("Unexpected error: " + ex.Message);
-				result.Add(0);
-			}
+		}
+		catch (Exception)
+		{
+			// Catch any other unexpected exceptions
+			Console.WriteLine("An unexpected error occurred.");
 		}
 
 		return result;
