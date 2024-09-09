@@ -11,18 +11,22 @@ class List
 		{
 			try
 			{
+				// Check if the index is out of range for either list
 				if (i >= list1.Count || i >= list2.Count)
 				{
 					Console.WriteLine("Out of range");
-					result.Add(0);
+					break; // Stop the loop if one of the lists is too short
 				}
-				else if (list2[i] == 0)
+
+				// Check if the element in the second list is zero (division by zero)
+				if (list2[i] == 0)
 				{
 					Console.WriteLine("Cannot divide by zero");
 					result.Add(0);
 				}
 				else
 				{
+					// Perform division and add the result
 					result.Add(list1[i] / list2[i]);
 				}
 			}
