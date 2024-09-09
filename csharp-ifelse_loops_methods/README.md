@@ -6,4 +6,4 @@ This project contains a C# console application that assigns a random signed numb
 
 1. Navigate to the project folder:
    ```sh
-   cd holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative
+   cd csharp-ifelse_loops_methods/0-positive_or_negative
