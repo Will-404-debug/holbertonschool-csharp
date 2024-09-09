@@ -11,21 +11,25 @@ class List
 		{
 			try
 			{
+				// Check if the index is within the bounds of both lists
+				if (i >= list1.Count || i >= list2.Count)
+				{
+					Console.WriteLine("Out of range");
+					result.Add(0);
+				}
+				else
+				{
 				int divisionResult = list1[i] / list2[i];
 				result.Add(divisionResult);
+				}
 			}
 			catch (DivideByZeroException)
 			{
 				Console.WriteLine("Cannot divide by zero");
 				result.Add(0);
 			}
-			catch (ArgumentOutOfRangeException)
-			{
-				Console.WriteLine("Out of range");
-				result.Add(0);
-			}
 		}
 
 		return result;
-	}
+		}
 }
