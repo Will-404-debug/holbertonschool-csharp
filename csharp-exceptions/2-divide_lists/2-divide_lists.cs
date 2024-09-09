@@ -15,7 +15,7 @@ class List
 				if (i >= list1.Count || i >= list2.Count)
 				{
 					Console.WriteLine("Out of range");
-					break; // Stop the loop if one of the lists is too short
+					continue; // Do not add any zero to the result
 				}
 
 				// Check if the element in the second list is zero (division by zero)
