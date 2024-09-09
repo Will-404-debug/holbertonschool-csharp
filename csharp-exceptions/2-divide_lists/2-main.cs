@@ -9,7 +9,7 @@ class Program
 		List<int> list2 = new List<int>() {1, 0, 2, 3};
 		List<int> result;
 
-		result = ListOperations.Divide(list1, list2, 5);
+		result = List.Divide(list1, list2, 5);
 
 		foreach (int i in result)
 			Console.WriteLine(i);
