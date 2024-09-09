@@ -19,17 +19,25 @@ class List
 				}
 				else
 				{
-				int divisionResult = list1[i] / list2[i];
-				result.Add(divisionResult);
+					try
+					{
+						int divisionResult = list1[i] / list2[i];
+						result.Add(divisionResult);
+					}
+					catch (DivideByZeroException)
+					{
+						Console.WriteLine("Cannot divide by zero");
+						result.Add(0);
+					}
 				}
 			}
-			catch (DivideByZeroException)
+			catch (Exception ex)
 			{
-				Console.WriteLine("Cannot divide by zero");
+				Console.WriteLine("Unexpected error: " + ex.Message);
 				result.Add(0);
 			}
 		}
 
 		return result;
-		}
+	}
 }
