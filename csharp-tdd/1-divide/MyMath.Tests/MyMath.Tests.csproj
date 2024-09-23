@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyMath\Matrix.csproj" />
+    <ProjectReference Include="..\MyMath\MyMath.csproj" />
   </ItemGroup>
 
 </Project>
