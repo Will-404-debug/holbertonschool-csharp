@@ -58,9 +58,9 @@ namespace Text.Tests
 		[Test]
 		public void TestLastCharUnique()
 		{
-			string input = "aabbccdef";
+			string input = "aabbccddeef";
 			int result = Str.UniqueChar(input);
-			Assert.AreEqual(6, result);  // 'f' is the first non-repeating character
+			Assert.AreEqual(10, result);  // 'f' is the first non-repeating character
 		}
 	}
 }
