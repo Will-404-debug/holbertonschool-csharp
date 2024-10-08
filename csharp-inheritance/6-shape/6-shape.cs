@@ -4,7 +4,7 @@
 /// <summary>
 /// Represents a generic geometric shape.
 /// </summary>
-public class Shape
+class Shape
 {
 	/// <summary>
 	/// Calculates the area of the shape.
@@ -21,7 +21,7 @@ public class Shape
 /// <summary>
 /// Represents a rectangle shape, inheriting from Shape.
 /// </summary>
-public class Rectangle : Shape
+class Rectangle : Shape
 {
 	private int width;   // Private field for width
 	private int height;  // Private field for height
