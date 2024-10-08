@@ -36,7 +36,7 @@ public class Rectangle : Shape
 		{
 			if (value < 0)
 			{
-				throw new ArgumentException("Width must be greater than or equal to 0.");
+				Console.WriteLine("Width must be greater than or equal to 0.");
 			}
 			else
 			{
@@ -55,7 +55,7 @@ public class Rectangle : Shape
 		{
 			if (value < 0)
 			{
-				throw new ArgumentException("Height must be greater than or equal to 0.");
+				Console.WriteLine("Height must be greater than or equal to 0.");
 			}
 			else
 			{
