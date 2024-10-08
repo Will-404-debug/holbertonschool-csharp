@@ -29,7 +29,6 @@ public class Rectangle : Shape
 	/// <summary>
 	/// Gets or sets the width of the rectangle.
 	/// </summary>
-	/// <exception cref="ArgumentException">Thrown when the value is negative.</exception>
 	public int Width
 	{
 		get { return width; }
@@ -39,14 +38,16 @@ public class Rectangle : Shape
 			{
 				throw new ArgumentException("Width must be greater than or equal to 0.");
 			}
-			width = value;
+			else
+			{
+				width = value;
+			}
 		}
 	}
 
 	/// <summary>
 	/// Gets or sets the height of the rectangle.
 	/// </summary>
-	/// <exception cref="ArgumentException">Thrown when the value is negative.</exception>
 	public int Height
 	{
 		get { return height; }
@@ -56,7 +57,10 @@ public class Rectangle : Shape
 			{
 				throw new ArgumentException("Height must be greater than or equal to 0.");
 			}
-			height = value;
+			else
+			{
+				height = value;
+			}
 		}
 	}
 }
