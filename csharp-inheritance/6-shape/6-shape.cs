@@ -36,6 +36,7 @@ public class Rectangle : Shape
 		{
 			if (value < 0)
 			{
+				// Output error message for negative width
 				Console.WriteLine("Width must be greater than or equal to 0.");
 			}
 			else
@@ -55,6 +56,7 @@ public class Rectangle : Shape
 		{
 			if (value < 0)
 			{
+				// Output error message for negative height
 				Console.WriteLine("Height must be greater than or equal to 0.");
 			}
 			else
