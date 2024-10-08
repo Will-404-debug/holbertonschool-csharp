@@ -59,13 +59,4 @@ public class Rectangle : Shape
 			height = value;
 		}
 	}
-
-	/// <summary>
-	/// Calculates the area of the rectangle.
-	/// </summary>
-	/// <returns>The area of the rectangle.</returns>
-	public override int Area()
-	{
-		return Width * Height; // Calculate area
-	}
 }
