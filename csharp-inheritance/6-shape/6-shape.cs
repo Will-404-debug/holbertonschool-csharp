@@ -2,22 +2,24 @@
 
 // 5-shape.cs
 /// <summary>
-/// Represents a generic shape.
+/// Represents a generic geometric shape.
 /// </summary>
 public class Shape
 {
 	/// <summary>
 	/// Calculates the area of the shape.
 	/// </summary>
-	/// <returns>Throws NotImplementedException.</returns>
+	/// <returns>The area of the shape.</returns>
+	/// <exception cref="NotImplementedException">Thrown when the method is not implemented.</exception>
 	public virtual int Area()
 	{
 		throw new NotImplementedException("Area() is not implemented");
 	}
 }
 
+// 6-shape.cs
 /// <summary>
-/// Represents a rectangle shape.
+/// Represents a rectangle shape, inheriting from Shape.
 /// </summary>
 public class Rectangle : Shape
 {
@@ -27,6 +29,7 @@ public class Rectangle : Shape
 	/// <summary>
 	/// Gets or sets the width of the rectangle.
 	/// </summary>
+	/// <exception cref="ArgumentException">Thrown when the value is negative.</exception>
 	public int Width
 	{
 		get { return width; }
@@ -43,6 +46,7 @@ public class Rectangle : Shape
 	/// <summary>
 	/// Gets or sets the height of the rectangle.
 	/// </summary>
+	/// <exception cref="ArgumentException">Thrown when the value is negative.</exception>
 	public int Height
 	{
 		get { return height; }
@@ -63,13 +67,5 @@ public class Rectangle : Shape
 	public override int Area()
 	{
 		return Width * Height; // Calculate area
-	}
-
-	/// <summary>
-	/// Displays the dimensions of the rectangle.
-	/// </summary>
-	public void DisplayDimensions()
-	{
-		Console.WriteLine($"Rectangle dimensions - Width: {Width}, Height: {Height}");
 	}
 }
