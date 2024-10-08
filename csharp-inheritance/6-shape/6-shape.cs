@@ -64,4 +64,12 @@ public class Rectangle : Shape
 	{
 		return Width * Height; // Calculate area
 	}
+
+	/// <summary>
+	/// Displays the dimensions of the rectangle.
+	/// </summary>
+	public void DisplayDimensions()
+	{
+		Console.WriteLine($"Rectangle dimensions - Width: {Width}, Height: {Height}");
+	}
 }
