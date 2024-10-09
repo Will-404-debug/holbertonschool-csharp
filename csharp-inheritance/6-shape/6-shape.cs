@@ -4,7 +4,7 @@
 /// <summary>
 /// Represents a generic geometric shape.
 /// </summary>
-class Shape
+public class Shape
 {
 	/// <summary>
 	/// Virtual method Area which throws a NotImplementedException.
@@ -20,11 +20,11 @@ class Shape
 /// <summary>
 /// Represents a rectangle shape, inheriting from Shape.
 /// </summary>
-class Rectangle : Shape
+public class Rectangle : Shape
 {
 	private int width;   // Private field for width
 	private int height;  // Private field for height
-	
+
 	/// <summary>
 	/// Gets or sets the width of the rectangle.
 	/// </summary>
@@ -34,17 +34,11 @@ class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-			{
-				// Output error message for negative width
-				Console.WriteLine("Width must be greater than or equal to 0.");
-			}
-			else
-			{
-				width = value;
-			}
+				throw new ArgumentException("Width must be greater than or equal to 0.");
+			width = value;
 		}
 	}
-
+	
 	/// <summary>
 	/// Gets or sets the height of the rectangle.
 	/// </summary>
@@ -54,14 +48,8 @@ class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-			{
-				// Output error message for negative height
-				Console.WriteLine("Height must be greater than or equal to 0.");
-			}
-			else
-			{
-				height = value;
-			}
+				throw new ArgumentException("Height must be greater than or equal to 0.");
+			height = value;
 		}
 	}
 }
