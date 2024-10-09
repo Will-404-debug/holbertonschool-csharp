@@ -1,6 +1,5 @@
 ﻿using System;
 
-// 5-shape.cs
 /// <summary>
 /// Represents a generic geometric shape.
 /// </summary>
@@ -16,7 +15,6 @@ public class Shape
 	}
 }
 
-// 6-shape.cs
 /// <summary>
 /// Represents a rectangle shape, inheriting from Shape.
 /// </summary>
@@ -34,10 +32,7 @@ public class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-			{
-				Console.WriteLine("Width must be greater than or equal to 0.");
-				return;  // Don't throw an exception, just return
-			}
+				throw new ArgumentException("Width must be greater than or equal to 0.");
 			width = value;
 		}
 	}
@@ -51,10 +46,7 @@ public class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-			{
-				Console.WriteLine("Height must be greater than or equal to 0.");
-				return;  // Again, no exception is thrown, we just return
-			}
+				throw new ArgumentException("Height must be greater than or equal to 0.");
 			height = value;
 		}
 	}
