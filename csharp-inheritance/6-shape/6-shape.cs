@@ -34,7 +34,10 @@ public class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-				throw new ArgumentException("Width must be greater than or equal to 0.");
+			{
+				Console.WriteLine("Width must be greater than or equal to 0.");
+				return;  // Don't throw an exception, just return
+			}
 			width = value;
 		}
 	}
@@ -48,7 +51,10 @@ public class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-				throw new ArgumentException("Height must be greater than or equal to 0.");
+			{
+				Console.WriteLine("Height must be greater than or equal to 0.");
+				return;  // Again, no exception is thrown, we just return
+			}
 			height = value;
 		}
 	}
