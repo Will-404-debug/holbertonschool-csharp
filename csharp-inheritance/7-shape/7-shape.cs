@@ -31,7 +31,7 @@ public class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-				throw new ArgumentException("Width must be greater than or equal to 0.");
+				throw new ArgumentException("Width must be greater than or equal to 0");
 			width = value;
 		}
 	}
@@ -45,7 +45,7 @@ public class Rectangle : Shape
 		set
 		{
 			if (value < 0)
-				throw new ArgumentException("Height must be greater than or equal to 0.");
+				throw new ArgumentException("Height must be greater than or equal to 0");
 			height = value;
 		}
 	}
