@@ -1,1 +1,1 @@
-136.88
+The length of AC in triangle ABC where AB = 64 and BC = 121 is approximately 136.88.
