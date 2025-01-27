@@ -15,31 +15,30 @@ namespace MatrixMath
             // Validate input: Check if the matrix is square
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
-            if (rows != cols)
+            if (rows != cols || matrix == null)
             {
                 return new double[,] { { -1 } };
             }
 
-            // Precompute cosine and sine of the angle
+            // Compute the cosine and sine of the angle
             double cosTheta = Math.Cos(angle);
             double sinTheta = Math.Sin(angle);
 
-            // Initialize the resulting matrix
-            double[,] result = new double[rows, cols];
+            // Create a new matrix to store the rotated values
+            double[,] rotatedMatrix = new double[rows, cols];
 
-            // Perform rotation using matrix multiplication (R * M)
+            // Apply rotation to each element of the matrix
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    result[i, j] = Math.Round(
-                        cosTheta * matrix[i, j] - sinTheta * matrix[(j + rows - 1) % rows, i],
-                        2
-                    );
+                    double x = matrix[i, j];
+                    double y = matrix[(i + 1) % rows, j]; // Simulating rotation of neighboring elements
+                    rotatedMatrix[i, j] = Math.Round(cosTheta * x - sinTheta * y, 2);
                 }
             }
 
-            return result;
+            return rotatedMatrix;
         }
     }
 }
