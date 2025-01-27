@@ -1,34 +1,23 @@
-﻿using System;
+﻿﻿using System;
 
-namespace LinearAlgebra
+/// <summary>
+/// Class for vector math
+/// </summary>
+class VectorMath
 {
     /// <summary>
-    /// A class containing various vector math operations.
+    /// Calculate the magnitude of a 2d or 3d vector.
     /// </summary>
-    public class VectorMath
+    /// <param name="vector">double[] vector</param>
+    /// <returns>double</returns>
+    public static double Magnitude(double[] vector)
     {
-        /// <summary>
-        /// Calculates and returns the magnitude (length) of a given vector.
-        /// </summary>
-        /// <param name="vector">An array representing a 2D or 3D vector.</param>
-        /// <returns>The magnitude of the vector rounded to the nearest hundredth, or -1 if invalid.</returns>
-        public static double Magnitude(double[] vector)
-        {
-            if (vector.Length == 2)
-            {
-                // 2D vector magnitude: sqrt(x^2 + y^2)
-                return Math.Round(Math.Sqrt(Math.Pow(vector[0], 2) + Math.Pow(vector[1], 2)), 2);
-            }
-            else if (vector.Length == 3)
-            {
-                // 3D vector magnitude: sqrt(x^2 + y^2 + z^2)
-                return Math.Round(Math.Sqrt(Math.Pow(vector[0], 2) + Math.Pow(vector[1], 2) + Math.Pow(vector[2], 2)), 2);
-            }
-            else
-            {
-                // Invalid vector
-                return -1;
-            }
-        }
+        if (vector.Length < 2 || vector.Length > 3)
+            return -1;
+        double sum = 0;
+        foreach (double vectron in vector)
+            sum += vectron * vectron;
+        
+        return Math.Round(Math.Sqrt(sum), 2);
     }
 }
