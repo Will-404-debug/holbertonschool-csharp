@@ -1,5 +1,0 @@
-D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.GeneratedMSBuildEditorConfig.editorconfig
-D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.AssemblyInfoInputs.cache
-D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.AssemblyInfo.cs
-D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.csproj.CoreCompileInputs.cache
-D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.sourcelink.json
