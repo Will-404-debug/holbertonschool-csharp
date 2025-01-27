@@ -8,4 +8,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="3-magnitude.cs" />
+    <Compile Include="3-main.cs" />
+  </ItemGroup>
+
 </Project>
