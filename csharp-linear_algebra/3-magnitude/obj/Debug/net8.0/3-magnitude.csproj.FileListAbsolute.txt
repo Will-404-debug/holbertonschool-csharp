@@ -1,0 +1,15 @@
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\bin\Debug\net8.0\3-magnitude.exe
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\bin\Debug\net8.0\3-magnitude.deps.json
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\bin\Debug\net8.0\3-magnitude.runtimeconfig.json
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\bin\Debug\net8.0\3-magnitude.dll
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\bin\Debug\net8.0\3-magnitude.pdb
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.GeneratedMSBuildEditorConfig.editorconfig
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.AssemblyInfoInputs.cache
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.AssemblyInfo.cs
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.csproj.CoreCompileInputs.cache
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.sourcelink.json
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.dll
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\refint\3-magnitude.dll
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.pdb
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\3-magnitude.genruntimeconfig.cache
+D:\holbertonschool-csharp\holbertonschool-csharp\csharp-linear_algebra\3-magnitude\obj\Debug\net8.0\ref\3-magnitude.dll
