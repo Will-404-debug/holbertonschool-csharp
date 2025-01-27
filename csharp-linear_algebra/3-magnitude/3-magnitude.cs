@@ -11,18 +11,18 @@ namespace VectorMath
         /// <returns>The magnitude of the vector rounded to the nearest hundredth, or -1 if invalid.</returns>
         public static double Magnitude(double[] vector)
         {
-            // Check if the vector is 2D or 3D
-            if (vector.Length != 2 && vector.Length != 3)
+            // Validate input (vector must be 2D or 3D and not null)
+            if (vector == null || (vector.Length != 2 && vector.Length != 3))
                 return -1;
 
-            // Calculate the sum of squares
+            // Calculate the sum of the squares
             double sumOfSquares = 0;
             foreach (double component in vector)
             {
-                sumOfSquares += Math.Pow(component, 2);
+                sumOfSquares += component * component;
             }
 
-            // Calculate the magnitude and round to the nearest hundredth
+            // Calculate magnitude and round to the nearest hundredth
             double magnitude = Math.Sqrt(sumOfSquares);
             return Math.Round(magnitude, 2);
         }
