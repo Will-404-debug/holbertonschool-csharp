@@ -2,19 +2,29 @@
 
 namespace VectorMath
 {
-    public static class VectorMath
+    public class VectorMath
     {
+        /// <summary>
+        /// Calculates and returns the magnitude (length) of a vector.
+        /// </summary>
+        /// <param name="vector">A double array representing the vector (2D or 3D).</param>
+        /// <returns>The magnitude of the vector rounded to the nearest hundredth, or -1 if invalid.</returns>
         public static double Magnitude(double[] vector)
         {
-            if (vector.Length == 2)
+            // Check if the vector is 2D or 3D
+            if (vector.Length != 2 && vector.Length != 3)
+                return -1;
+
+            // Calculate the sum of squares
+            double sumOfSquares = 0;
+            foreach (double component in vector)
             {
-                return Math.Round(Math.Sqrt(vector[0] * vector[0] + vector[1] * vector[1]), 2);
+                sumOfSquares += Math.Pow(component, 2);
             }
-            else if (vector.Length == 3)
-            {
-                return Math.Round(Math.Sqrt(vector[0] * vector[0] + vector[1] * vector[1] + vector[2] * vector[2]), 2);
-            }
-            return -1;
+
+            // Calculate the magnitude and round to the nearest hundredth
+            double magnitude = Math.Sqrt(sumOfSquares);
+            return Math.Round(magnitude, 2);
         }
     }
 }
