@@ -5,22 +5,22 @@ namespace MatrixMath
     public class MatrixMath
     {
         /// <summary>
-        /// Rotates a square 2D matrix by a given angle in radians.
+        /// Rotates a 2x2 2D matrix by a given angle in radians.
         /// </summary>
-        /// <param name="matrix">The 2D matrix to be rotated.</param>
-        /// <param name="angle">The angle of rotation in radians.</param>
-        /// <returns>The rotated matrix, or a matrix containing -1 if invalid.</returns>
+        /// <param name="matrix">The 2x2 matrix to rotate.</param>
+        /// <param name="angle">The rotation angle in radians.</param>
+        /// <returns>The rotated matrix, or a matrix containing -1 if the input is invalid.</returns>
         public static double[,] Rotate2D(double[,] matrix, double angle)
         {
-            // Validate that the matrix is a 2x2 matrix
-            if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
+            // Validate input: the matrix must be 2x2
+            if (matrix == null || matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
             {
                 return new double[,] { { -1 } };
             }
 
-            // Define the rotation matrix
-            double cosTheta = Math.Round(Math.Cos(angle), 2);
-            double sinTheta = Math.Round(Math.Sin(angle), 2);
+            // Create the rotation matrix
+            double cosTheta = Math.Cos(angle);
+            double sinTheta = Math.Sin(angle);
 
             double[,] rotationMatrix = new double[,]
             {
@@ -34,12 +34,13 @@ namespace MatrixMath
             {
                 for (int j = 0; j < 2; j++) // Columns of the result matrix
                 {
+                    // Calculate the dot product
                     result[i, j] = 0;
-                    for (int k = 0; k < 2; k++) // Dot product calculation
+                    for (int k = 0; k < 2; k++)
                     {
                         result[i, j] += rotationMatrix[i, k] * matrix[k, j];
                     }
-                    // Round the result to two decimal places
+                    // Round to two decimal places
                     result[i, j] = Math.Round(result[i, j], 2);
                 }
             }
