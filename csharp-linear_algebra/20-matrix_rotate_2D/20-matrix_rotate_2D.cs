@@ -1,6 +1,6 @@
 using System;
 
-public class MatrixMath
+class MatrixMath
 {
     /// <summary>
     /// Rotates a 2D square matrix by a given angle in radians.
