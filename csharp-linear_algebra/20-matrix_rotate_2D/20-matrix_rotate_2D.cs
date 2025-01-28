@@ -1,7 +1,5 @@
 using System;
 
-namespace MatrixMath
-{
     public class MatrixMath
     {
         /// <summary>
@@ -41,4 +39,3 @@ namespace MatrixMath
             return rotatedMatrix;
         }
     }
-}
