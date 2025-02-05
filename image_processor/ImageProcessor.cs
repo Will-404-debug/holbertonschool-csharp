@@ -9,7 +9,7 @@ class ImageProcessor
 {
     public static void Inverse(string[] filenames)
     {
-        string rootDirectory = Directory.GetCurrentDirectory(); // Ensure images are saved in the root directory
+        string rootDirectory = Directory.GetCurrentDirectory(); // Ensures images are saved in the root directory
 
         Parallel.ForEach(filenames, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, filename =>
         {
@@ -20,7 +20,7 @@ class ImageProcessor
                     image.Mutate(ctx => ctx.Invert()); // Apply color inversion
 
                     string newFilename = Path.Combine(
-                        rootDirectory, // Save in the project root directory
+                        rootDirectory, // Save in the correct directory
                         Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename)
                     );
 
