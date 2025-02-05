@@ -1,11 +1,47 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "SixLabors.ImageSharp/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/SixLabors.ImageSharp.props": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SixLabors.ImageSharp/3.1.6": {
+      "sha512": "dHQ5jugF9v+5/LCVHCWVzaaIL6WOehqJy6eju/0VFYFPEj2WtqkGPoEV9EVQP83dHsdoqYaTuWpZdwAd37UwfA==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.1.6.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "SixLabors.ImageSharp >= 3.1.6"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\moi\\.nuget\\packages\\": {},
@@ -14,9 +50,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\holbertonschool-csharp\\holbertonschool-csharp\\image_processor\\image_processor.csproj",
-      "projectName": "image_processor",
-      "projectPath": "D:\\holbertonschool-csharp\\holbertonschool-csharp\\image_processor\\image_processor.csproj",
+      "projectUniqueName": "D:\\holbertonschool-csharp\\holbertonschool-csharp\\image_processor\\ImageProcessor.csproj",
+      "projectName": "ImageProcessor",
+      "projectPath": "D:\\holbertonschool-csharp\\holbertonschool-csharp\\image_processor\\ImageProcessor.csproj",
       "packagesPath": "C:\\Users\\moi\\.nuget\\packages\\",
       "outputPath": "D:\\holbertonschool-csharp\\holbertonschool-csharp\\image_processor\\obj\\",
       "projectStyle": "PackageReference",
@@ -52,6 +88,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[3.1.6, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

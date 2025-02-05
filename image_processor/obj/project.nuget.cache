@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "acvdwdoh+uI=",
+  "dgSpecHash": "xCKxWtFOsTs=",
   "success": true,
-  "projectFilePath": "D:\\holbertonschool-csharp\\holbertonschool-csharp\\image_processor\\image_processor.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\holbertonschool-csharp\\holbertonschool-csharp\\image_processor\\ImageProcessor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\moi\\.nuget\\packages\\sixlabors.imagesharp\\3.1.6\\sixlabors.imagesharp.3.1.6.nupkg.sha512"
+  ],
   "logs": []
 }
