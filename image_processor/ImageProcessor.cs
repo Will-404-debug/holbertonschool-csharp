@@ -9,7 +9,7 @@ class ImageProcessor
 {
     public static void Inverse(string[] filenames)
     {
-        Parallel.ForEach(filenames, filename =>
+        Parallel.ForEach(filenames, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, filename =>
         {
             try
             {
@@ -22,7 +22,7 @@ class ImageProcessor
                         Path.GetFileNameWithoutExtension(filename) + "_inverse" + Path.GetExtension(filename)
                     );
 
-                    image.Save(newFilename); // Save with the same format
+                    image.Save(newFilename); // Save in the same format
                     Console.WriteLine($"Saved inverted image: {newFilename}");
                 }
             }
