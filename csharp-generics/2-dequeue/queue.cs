@@ -63,7 +63,9 @@ class Queue<T>
         return count;
     }
 
-    /// <summary>Removes the first node and returns its value</summary>
+    /// <summary>
+    /// Removes the first node and returns its value
+    /// </summary>
     /// <returns>Value of the removed node or default if empty</returns>
     public T Dequeue()
     {
@@ -74,11 +76,14 @@ class Queue<T>
         }
 
         T value = head.value;
+
         head = head.next;
         count--;
 
         if (head == null)
+        {
             tail = null;
+        }
 
         return value;
     }
