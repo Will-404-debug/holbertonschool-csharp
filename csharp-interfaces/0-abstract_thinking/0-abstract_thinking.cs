@@ -1,19 +1,14 @@
-﻿using System;
+﻿﻿using System;
 
 /// <summary>
-/// Abstract class Base with a public property 'name'
-/// and an overridden ToString method.
+/// Base class
 /// </summary>
 abstract class Base
 {
-    /// <summary>
-    /// Public string property
-    /// </summary>
+    /// <summary>Name property</summary>
     public string name { get; set; }
 
-    /// <summary>
-    /// Override ToString to return "<name> is a <type>"
-    /// </summary>
+    /// <summary>ToString override</summary>
     public override string ToString()
     {
         return $"{name} is a {GetType().Name}";
