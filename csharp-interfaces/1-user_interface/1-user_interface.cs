@@ -41,7 +41,9 @@ public interface ICollectable
 /// </summary>
 public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
+    /// <summary>Durability property</summary>
     public int durability { get; set; }
+    /// <summary>isCollected property</summary>
     public bool isCollected { get; set; }
 
     public void Interact()
