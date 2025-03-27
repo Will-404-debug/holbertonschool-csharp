@@ -4,7 +4,7 @@
 /// Abstract class Base with a public property 'name'
 /// and an overridden ToString method.
 /// </summary>
-public abstract class Base
+abstract class Base
 {
     /// <summary>
     /// Public string property
