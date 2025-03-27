@@ -16,20 +16,20 @@ abstract class Base
 }
 
 /// <summary>Interface for interactive objects</summary>
-public interface IInteractive
+interface IInteractive
 {
     void Interact();
 }
 
 /// <summary>Interface for breakable objects</summary>
-public interface IBreakable
+interface IBreakable
 {
     int durability { get; set; }
     void Break();
 }
 
 /// <summary>Interface for collectable objects</summary>
-public interface ICollectable
+interface ICollectable
 {
     bool isCollected { get; set; }
     void Collect();
@@ -39,7 +39,7 @@ public interface ICollectable
 /// TestObject class that inherits Base and implements
 /// IInteractive, IBreakable, and ICollectable
 /// </summary>
-public class TestObject : Base, IInteractive, IBreakable, ICollectable
+class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
     /// <summary>Durability property</summary>
     public int durability { get; set; }
