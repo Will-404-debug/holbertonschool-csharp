@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Player
+class Player
 {
     private string name;
     private float maxHp;
