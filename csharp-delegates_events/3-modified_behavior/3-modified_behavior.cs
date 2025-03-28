@@ -1,86 +1,109 @@
 ﻿using System;
 
-/// <summary> Modifier enum. </summary>
+/// <summary>
+/// Modifier enum
+/// </summary>
 public enum Modifier
 {
+    /// <summary> Weak modifier</summary>
     Weak,
+    /// <summary> Base modifier</summary>
     Base,
+    /// <summary> Strong modifier</summary>
     Strong
 }
 
-/// <summary> Delegate for calculating a modified value. </summary>
+/// <summary>
+/// CalculateModifier delegate
+/// </summary>
+/// <param name="baseValue"></param>
+/// <param name="modifier"></param>
+/// <returns></returns>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
+/// <summary>
+/// Player class
+/// </summary>
 class Player
 {
+    /*player name*/
     private string name;
+    /*player max hp*/
     private float maxHp;
+    /*player hp*/
     private float hp;
 
-    // Constructor
+    /// <summary> CalculateHealth delegate</summary>
+    public delegate void CalculateHealth(float amount);
+
+    /// <summary>
+    /// Player constructor
+    /// </summary>
     public Player(string name = "Player", float maxHp = 100f)
     {
         this.name = name;
-
-        if (maxHp <= 0f)
+        if (maxHp <= 0)
         {
-            Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
             this.maxHp = 100f;
+            Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
         }
         else
         {
             this.maxHp = maxHp;
         }
-
         this.hp = this.maxHp;
     }
 
-    // PrintHealth method
+    /// <summary>
+    /// Print player health
+    /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
+        Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 
-    // TakeDamage method
+    /// <summary>
+    /// Take damage method
+    /// </summary>
     public void TakeDamage(float damage)
     {
-        if (damage < 0f)
-            damage = 0f;
-
-        Console.WriteLine($"{this.name} takes {damage} damage!");
-        float newHp = this.hp - damage;
-        ValidateHP(newHp);
+        damage = damage >= 0 ? damage : 0;
+        Console.WriteLine("{0} takes {1} damage!", name, damage);
+        ValidateHP(hp - damage);
     }
 
-    // HealDamage method
+    /// <summary>
+    /// Heal damage method
+    /// </summary>
     public void HealDamage(float heal)
     {
-        if (heal < 0f)
-            heal = 0f;
-
-        Console.WriteLine($"{this.name} heals {heal} HP!");
-        float newHp = this.hp + heal;
-        ValidateHP(newHp);
+        heal = heal >= 0 ? heal : 0;
+        Console.WriteLine("{0} heals {1} HP!", name, heal);
+        ValidateHP(hp + heal);
     }
 
-    // ValidateHP method
+    /// <summary>
+    /// Validate and set hp
+    /// </summary>
     public void ValidateHP(float newHp)
     {
-        if (newHp < 0f)
+        switch (newHp)
         {
-            this.hp = 0f;
-        }
-        else if (newHp > this.maxHp)
-        {
-            this.hp = this.maxHp;
-        }
-        else
-        {
-            this.hp = newHp;
+            case float health when health < 0:
+                hp = 0;
+                break;
+            case float health when health > maxHp:
+                hp = maxHp;
+                break;
+            default:
+                hp = newHp;
+                break;
         }
     }
 
-    // ApplyModifier method matching the delegate
+    /// <summary>
+    /// ApplyModifier method
+    /// </summary>
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
         switch (modifier)
