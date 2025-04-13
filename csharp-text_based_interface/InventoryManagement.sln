@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryLibrary", "Invento
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManager", "InventoryManager\InventoryManager.csproj", "{7CA7DB82-D377-4D0D-8188-A24A8366CDEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Tests", "InventoryManagement.Tests\InventoryManagement.Tests.csproj", "{31695471-ECC6-4E55-A667-CFCF2E92C7EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{7CA7DB82-D377-4D0D-8188-A24A8366CDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CA7DB82-D377-4D0D-8188-A24A8366CDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CA7DB82-D377-4D0D-8188-A24A8366CDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31695471-ECC6-4E55-A667-CFCF2E92C7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31695471-ECC6-4E55-A667-CFCF2E92C7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31695471-ECC6-4E55-A667-CFCF2E92C7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31695471-ECC6-4E55-A667-CFCF2E92C7EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
