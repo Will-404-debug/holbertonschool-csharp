@@ -97,7 +97,7 @@ Inventory Manager
             var found = false;
             foreach (var obj in storage.All())
             {
-                if (obj.Key.StartsWith(className + ".", StringComparison.OrdinalIgnoreCase))
+                if (obj.Key.StartsWith(Capitalize(className) + ".", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"{obj.Key}: {System.Text.Json.JsonSerializer.Serialize(obj.Value)}");
                     found = true;
@@ -119,7 +119,22 @@ Inventory Manager
                     Console.Write("Enter Item Name: ");
                     string? name = Console.ReadLine();
                     if (string.IsNullOrWhiteSpace(name)) { Console.WriteLine("Name is required."); return; }
-                    obj = new Item(name);
+
+                    Item item = new Item(name);
+
+                    Console.Write("Enter Description (optional): ");
+                    item.description = Console.ReadLine() ?? "";
+
+                    Console.Write("Enter Price (optional): ");
+                    string? priceInput = Console.ReadLine();
+                    if (float.TryParse(priceInput, out float price)) item.price = (float)Math.Round(price, 2);
+
+                    Console.Write("Enter Tags (comma separated, optional): ");
+                    string? tagInput = Console.ReadLine();
+                    if (!string.IsNullOrWhiteSpace(tagInput))
+                        item.tags = new List<string>(tagInput.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
+
+                    obj = item;
                 }
                 else if (className.Equals("user", StringComparison.OrdinalIgnoreCase))
                 {
@@ -169,7 +184,7 @@ Inventory Manager
 
         static void ShowObject(string className, string id)
         {
-            string key = $"{className}.{id}";
+            string key = $"{Capitalize(className)}.{id}";
             if (storage.All().TryGetValue(key, out BaseClass? obj))
             {
                 Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(obj, new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
@@ -182,7 +197,7 @@ Inventory Manager
 
         static void UpdateObject(string className, string id)
         {
-            string key = $"{className}.{id}";
+            string key = $"{Capitalize(className)}.{id}";
             if (!storage.All().ContainsKey(key))
             {
                 Console.WriteLine($"Object {id} could not be found");
@@ -221,7 +236,7 @@ Inventory Manager
 
         static void DeleteObject(string className, string id)
         {
-            string key = $"{className}.{id}";
+            string key = $"{Capitalize(className)}.{id}";
             if (storage.All().Remove(key))
             {
                 storage.Save();
@@ -231,6 +246,11 @@ Inventory Manager
             {
                 Console.WriteLine($"Object {id} could not be found");
             }
+        }
+
+        static string Capitalize(string input)
+        {
+            return char.ToUpper(input[0]) + input.Substring(1).ToLower();
         }
     }
 }
